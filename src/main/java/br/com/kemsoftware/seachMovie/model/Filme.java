@@ -2,12 +2,18 @@ package br.com.kemsoftware.seachMovie.model;
 
 public class Filme {
 	private String nome;
-	private Integer ano;
+	private Integer duracaoEmMinutos;
+	private Integer anoLancamento;
+	private String genero;
+	private String poster;
 	
 	
-	public Filme(String nome, Integer ano) {
+	public Filme(String nome, Integer duracaoEmMinutos, Integer anoDeLancamento, String genero, String poster) {
 		this.nome = nome;
-		this.ano = ano;
+		this.duracaoEmMinutos = duracaoEmMinutos;
+		this.anoLancamento = anoDeLancamento;
+		this.genero = genero;
+		this.poster = poster;
 	}
 
 
@@ -16,26 +22,36 @@ public class Filme {
 	}
 
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public Integer getDuracaoEmMinutos() {
+		return duracaoEmMinutos;
 	}
 
 
-	public Integer getAno() {
-		return ano;
+	public Integer getAnoDeLancamento() {
+		return anoLancamento;
 	}
 
 
-	public void setAno(Integer ano) {
-		this.ano = ano;
+	public String getGenero() {
+		return genero;
 	}
 
 
-	@Override
-	public String toString() {
-		return "Filme [nome=" + nome + ", ano=" + ano + "]";
+	public String getPoster() {
+		return poster;
 	}
 	
+
+    @Override
+    public String toString() {
+        return "Filme{" +                
+                ", nome='" + nome + '\'' +
+                ", duracaoEmMinutos=" + duracaoEmMinutos +
+                ", anoLancamento=" + anoLancamento +
+                ", genero='" + genero + '\'' +
+                ", poster='" + poster + '\'' +
+                '}';
+    }
 	
 	
 }
